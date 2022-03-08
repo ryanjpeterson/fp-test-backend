@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_types",
+  "info": {
+    "singularName": "unit-type",
+    "pluralName": "unit-types",
+    "displayName": "UnitType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::unit.unit",
+      "inversedBy": "unit_type"
+    },
+    "name": {
+      "type": "string"
+    },
+    "numOfBeds": {
+      "type": "decimal",
+      "min": 0,
+      "max": 3,
+      "default": 0,
+      "required": true
+    },
+    "numOfBaths": {
+      "type": "decimal",
+      "required": true,
+      "default": 0,
+      "max": 3,
+      "min": 0
+    }
+  }
+}

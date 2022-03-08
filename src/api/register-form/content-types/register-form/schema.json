@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "register_forms",
+  "info": {
+    "singularName": "register-form",
+    "pluralName": "register-forms",
+    "displayName": "RegisterForm",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "unregisteredText": {
+      "type": "string"
+    },
+    "registeredText": {
+      "type": "string"
+    }
+  }
+}

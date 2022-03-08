@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "Unit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "floor": {
+      "type": "integer",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "integer",
+      "required": true
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "required": true
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "required": true
+    },
+    "sqft": {
+      "type": "integer",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "floorplanImg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "previewImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "vrTourURL": {
+      "type": "string"
+    },
+    "floorplanPDF": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "keyplateImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "unit_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::unit-type.unit-type",
+      "mappedBy": "unit"
+    }
+  }
+}
